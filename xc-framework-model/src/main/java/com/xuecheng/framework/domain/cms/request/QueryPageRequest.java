@@ -15,10 +15,13 @@ public class QueryPageRequest {
     //页面ID
     private String pageId;
     //页面名称
+    @ApiModelProperty("页面ID")
     private String pageName;
     //别名
+    @ApiModelProperty("页面别名")
     private String pageAliase;
     //模版id
+    @ApiModelProperty("页面模板")
     private String templateId;
     //....
 }

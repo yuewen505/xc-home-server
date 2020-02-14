@@ -27,15 +27,15 @@ public class PageService {
         //条件值对象
         CmsPage cmsPage = new CmsPage();
         //设置条件值（站点id）
-        if(StringUtils.isEmpty(queryPageRequest.getSiteId())){
+        if(StringUtils.isNotEmpty(queryPageRequest.getSiteId())){
             cmsPage.setSiteId(queryPageRequest.getSiteId());
         }
         //设置模板id作为查询条件
-        if(StringUtils.isEmpty(queryPageRequest.getTemplateId())){
+        if(StringUtils.isNotEmpty(queryPageRequest.getTemplateId())){
             cmsPage.setTemplateId(queryPageRequest.getTemplateId());
         }
         //设置页面别名作为查询条件
-        if(StringUtils.isEmpty(queryPageRequest.getPageAliase())){
+        if(StringUtils.isNotEmpty(queryPageRequest.getPageAliase())){
             cmsPage.setPageAliase(queryPageRequest.getPageAliase());
         }
         if(page<=0){
@@ -56,5 +56,6 @@ public class PageService {
         QueryResponseResult queryResponseResult=new QueryResponseResult(CommonCode.SUCCESS,queryResult);
         return queryResponseResult;
     }
+
 
 }
