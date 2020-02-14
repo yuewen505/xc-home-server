@@ -19,5 +19,4 @@ public class CmsSiteController implements CmsSiteControllerApi {
     public QueryResponseResult findSiteList(CmsSite cmsSite) {
         return pageSiteService.findSiteList();
     }
-
 }
